@@ -1,0 +1,59 @@
+.show-btn {
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  display: none;
+  padding-left: 57px;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 63px;
+  }
+
+  &::before {
+    content: url('../img/downArrows.svg');
+    display: inline-block;
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    left: 25px;
+    transition: all 0.5s;
+
+    @media screen and (min-width: 1024px) {
+      left: 31px;
+    }
+  }
+
+  &--margin {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text::after {
+    @media screen and (min-width: 768px) {
+      content: 'Показать все';
+    }
+  }
+
+  &__text--clicked::after {
+    @media screen and (min-width: 768px) {
+      content: 'Скрыть';
+    }
+  }
+
+  &--rotate::before {
+    transform: rotate(-180deg);
+  }
+}

@@ -1,0 +1,22 @@
+.lang {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 8px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    font-weight: 500;
+  }
+
+  &__btn--active {
+    color: #7e7e82;
+  }
+}

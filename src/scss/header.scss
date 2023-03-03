@@ -1,0 +1,29 @@
+.header {
+  background-color: #ffffff;
+  padding: 18px 16px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D9FFF5;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  &__burger-button--margin {
+    @media screen and (min-width: 650px) and (max-width: 1024px) {
+      margin-right: 24px;
+    }
+  }
+
+  &__logo--margin {
+    @media screen and (min-width: 450px) {
+      margin-right: 30%;
+    }
+  }
+
+  &__img-button--repair--margin {
+    margin-left: 24px;
+  }
+}
+

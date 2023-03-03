@@ -1,0 +1,40 @@
+.footer {
+  &__wrapper {
+    padding: 0 16px;
+    padding-bottom: 6px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 0 32px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #7e7e82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      text-align: start;
+      width: 33%;
+    }
+  }
+
+  &__link {
+    color: #7e7e82;
+
+    &:hover,
+    &:focus {
+      color: #FF3E79;
+    }
+  }
+}

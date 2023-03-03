@@ -1,0 +1,18 @@
+.link-arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  &::after {
+    content: url('../img/brands/go.svg');
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1.1);
+  }
+}

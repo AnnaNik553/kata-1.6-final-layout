@@ -1,0 +1,84 @@
+.img-button {
+  color: transparent;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  transition: all 0.3s;
+  border-radius: 50%;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--burger {
+    background: url('../img/nav/burger.svg') no-repeat center center #ffffff;
+  }
+
+  &--burger-pseudo-element::after {
+    @media screen and (min-width: 650px) and (max-width: 1024px) {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 32px;
+      transform: translateY(-50%);
+      background: #eaeaea;
+      border-radius: 1px;
+      margin-left: 23px;
+      cursor: default;
+    }
+  }
+
+  &--burger-close {
+    background: url('../img/nav/burger-close.svg') no-repeat center center
+      #ffffff;
+
+    
+  }
+
+  &--search {
+    background: url('../img/nav/search.svg') no-repeat center center #ffffff;
+  }
+
+  &--call {
+    background: url('../img/nav/call.svg') no-repeat center center #ffffff;
+  }
+
+  &--feedback {
+    background: url('../img/nav/chat.svg') no-repeat center center #ffffff;
+  }
+
+  &--profile {
+    background: url('../img/nav/profile.svg') no-repeat center center #ffffff;
+  }
+
+  &--repair {
+    background: url('../img/nav/repair.svg') no-repeat center center #ffffff;
+    position: relative;
+  }
+
+  &--checkstatus {
+    background: url('../img/nav/checkstatus.svg') no-repeat center center
+      #ffffff;
+  }
+
+  &--hidden {
+    display: none;
+
+    @media screen and (min-width: 650px) and (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &--repair--pseudo-element::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    transform: translateX(-50%);
+    background: #eaeaea;
+    border-radius: 1px;
+    margin-left: -19px;
+    cursor: default;
+  }
+}

@@ -1,0 +1,15 @@
+.logo {
+  min-width: 98px;
+  width: 98px;
+  height: 52px;
+  border: 2px solid transparent;
+
+  &:focus {
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

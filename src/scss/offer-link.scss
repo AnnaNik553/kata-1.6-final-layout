@@ -1,0 +1,45 @@
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+}
+
+.offer-link {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  display: inline-block;
+  padding: 0 16px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 24px;
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 32px;
+  }
+
+  &:after {
+    content: url(../img/main/arrowrightRed.svg);
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    bottom: -2px;
+    padding-left: 10px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    animation: move 1s infinite;
+  }
+}

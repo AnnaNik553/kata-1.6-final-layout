@@ -1,0 +1,87 @@
+.about {
+  position: relative;
+
+  &__box {
+    @media screen and (min-width: 650px) {
+      width: 50%;
+    }
+  }
+
+  &__read-more-checker {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &__limiter {
+    max-height: 73px;
+    overflow: hidden;
+    padding: 0 16px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 650px) {
+      max-height: 150px;
+      overflow: hidden;
+      padding: 0 40px 0 16px;
+    }
+  }
+
+  &__text {
+    letter-spacing: 0.4px;
+    color: #1b1c21;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__read-more-button {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #1b1c21;
+    font-weight: 500;
+    margin-bottom: 14px;
+    border-bottom: 2px solid transparent;
+  }
+
+  &__img {
+    width: 100%;
+
+    @media screen and (min-width: 650px) {
+      width: 50%;
+      background: #f8f8f8;
+      border-radius: 6px;
+      align-self: flex-start;
+    }
+  }
+
+  &--align--row {
+    @media screen and (min-width: 650px) {
+      display: flex;
+      padding: 25px;
+    }
+  }
+}
+
+.about__read-more-checker:checked ~ .about__limiter {
+  max-height: none;
+}
+
+.about__read-more-checker ~ .about__read-more-button:before {
+  content: url('../img/main/downArrows.svg');
+  padding-right: 15px;
+}
+.about__read-more-checker:checked ~ .about__read-more-button:before {
+  content: url('../img/main/downArrows.svg');
+  display: inline-block;
+  transform: rotate(180deg) translateX(60%) translateY(5%);
+}
+
+.about__read-more-checker:focus ~ .about__read-more-button {
+  border-bottom: 2px solid #b8ffec;
+}
