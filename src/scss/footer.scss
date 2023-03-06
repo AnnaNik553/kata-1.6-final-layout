@@ -1,40 +1,39 @@
 .footer {
   &__wrapper {
-    padding: 0 16px;
+    padding: 0 $pd_s;
     padding-bottom: 6px;
 
-    @media screen and (min-width: 768px) {
-      padding: 0 24px;
+    @media screen and (min-width: $screen-lg) {
+      padding: 0 $pd_m;
       display: flex;
       justify-content: space-between;
     }
 
-    @media screen and (min-width: 1024px) {
-      padding: 0 32px;
+    @media screen and (min-width: $screen-xl) {
+      padding: 0 $pd_l;
     }
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 16px;
+    @include fontz(14px, 16px, 0);
     text-align: center;
-    color: #7e7e82;
+    color: $color_text2;
     mix-blend-mode: normal;
     opacity: 0.72;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       text-align: start;
       width: 33%;
     }
   }
 
   &__link {
-    color: #7e7e82;
+    color: $color_text2;
 
     &:hover,
     &:focus {
-      color: #FF3E79;
+      color: $color_accent1;
     }
   }
 }

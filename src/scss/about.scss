@@ -1,34 +1,32 @@
 .about {
-  position: relative;
-
   &__box {
     @media screen and (min-width: 650px) {
       width: 50%;
     }
   }
 
-  &__read-more-checker {
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
   &__limiter {
     max-height: 73px;
     overflow: hidden;
-    padding: 0 16px;
+    padding: 0 $pd_s;
     margin-bottom: 15px;
+    transition: all 0.1s ease;
 
     @media screen and (min-width: 650px) {
-      max-height: 150px;
+      max-height: 148px;
       overflow: hidden;
       padding: 0 40px 0 16px;
     }
   }
 
+  &__limiter--height {
+    max-height: 1000px;
+    transition: all 1s ease;
+  }
+
   &__text {
     letter-spacing: 0.4px;
-    color: #1b1c21;
+    color: $color_text1;
     margin-bottom: 20px;
 
     &:last-of-type {
@@ -36,17 +34,63 @@
     }
   }
 
-  &__read-more-button {
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 24px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.4px;
-    color: #1b1c21;
+  &__show-btn {
+    @include fontz(16px, 24px, -0.2px);
+    background: transparent;
     font-weight: 500;
-    margin-bottom: 14px;
-    border-bottom: 2px solid transparent;
+    color: $color_text1;
+    padding-left: 57px;
+    position: relative;
+    transition: all 0.5s;
+    display: block;
+
+    @media screen and (min-width: 1024px) {
+      padding-left: 63px;
+    }
+
+    &::before {
+      content: url('../img/downArrows.svg');
+      display: inline-block;
+      width: 24px;
+      height: 23px;
+      position: absolute;
+      left: 25px;
+      transition: all 0.5s;
+
+      @media screen and (min-width: 1024px) {
+        left: 31px;
+      }
+    }
+
+    &:hover::before {
+      animation: moveDown 1s infinite;
+    }
+
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &--margin {
+      margin-bottom: 16px;
+    }
+
+    &--rotate::before {
+      transform: rotate(-180deg);
+    }
+
+    &--rotate {
+      &:hover::before {
+        animation: moveUp 1s infinite;
+      }
+    }
+  }
+
+  &__show-text::after {
+    content: 'Читать далее';
+  }
+
+  &__show-text--clicked::after {
+    content: 'Скрыть';
   }
 
   &__img {
@@ -68,20 +112,22 @@
   }
 }
 
-.about__read-more-checker:checked ~ .about__limiter {
-  max-height: none;
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
 }
 
-.about__read-more-checker ~ .about__read-more-button:before {
-  content: url('../img/main/downArrows.svg');
-  padding-right: 15px;
-}
-.about__read-more-checker:checked ~ .about__read-more-button:before {
-  content: url('../img/main/downArrows.svg');
-  display: inline-block;
-  transform: rotate(180deg) translateX(60%) translateY(5%);
-}
-
-.about__read-more-checker:focus ~ .about__read-more-button {
-  border-bottom: 2px solid #b8ffec;
+@keyframes moveUp {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg) translateY(40%);
+  }
 }

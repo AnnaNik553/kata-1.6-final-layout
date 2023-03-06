@@ -1,0 +1,36 @@
+// цвета
+$color_back1: #f8f8f8;
+$color_back2: #ffffff;
+$color_back3: #eaeaea;
+$color_back4: #f1f1f1;
+$color_back5: #dddddd;
+$color_back6: #b5b6bc;
+$color_back7: #fefefe;
+$color_back8: #b5b6bc;
+$color_accent1: #ff3e79;
+$color_accent2: #41f6d7;
+$color_accent3: #b8ffec;
+$color_accent4: #d9fff5;
+$color_modal: rgba(255, 255, 255, 0.9);
+$color_shadow: rgba(14, 24, 80, 0.2);
+$color_text1: #1b1c21;
+$color_text2: #7e7e82;
+$color_text3: #111213;
+
+// размеры экрана
+$screen-sm: 450px;
+$screen-md: 650px;
+$screen-lg: 768px;
+$screen-xl: 1024px;
+
+// шрифты
+@mixin fontz($fs, $lh, $ls) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+// @include fontz(16px, 24px, -0.2px);
+// отступы
+$pd_s: 16px;
+$pd_m: 24px;
+$pd_l: 32px;

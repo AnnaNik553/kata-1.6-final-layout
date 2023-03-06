@@ -9,14 +9,18 @@
 
   &__btn {
     background-color: transparent;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1b1c21;
+    @include fontz(16px, 24px, -0.2px);
+    color: $color_text1;
     font-weight: 500;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $color_accent1;
+    }
   }
 
   &__btn--active {
-    color: #7e7e82;
+    color: $color_text2;
   }
 }

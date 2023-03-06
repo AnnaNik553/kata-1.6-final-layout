@@ -1,19 +1,38 @@
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg) translateY(40%);
+  }
+}
+
 .show-btn {
   background: transparent;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: #1b1c21;
+  @include fontz(16px, 24px, -0.2px);
+  color: $color_text1;
   display: none;
   padding-left: 57px;
   position: relative;
+  transition: all 0.5s;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $screen-lg) {
     display: block;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $screen-xl) {
     padding-left: 63px;
   }
 
@@ -26,34 +45,48 @@
     left: 25px;
     transition: all 0.5s;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-xl) {
       left: 31px;
     }
   }
 
+  &:hover::before {
+    animation: moveDown 1s infinite;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
   &--margin {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-xl) {
       margin-bottom: 50px;
     }
   }
 
   &__text::after {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       content: 'Показать все';
     }
   }
 
   &__text--clicked::after {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       content: 'Скрыть';
     }
   }
 
   &--rotate::before {
     transform: rotate(-180deg);
+  }
+
+  &--rotate {
+    &:hover::before {
+      animation: moveUp 1s infinite;
+    }
   }
 }

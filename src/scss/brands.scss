@@ -2,22 +2,22 @@
   &__swiper {
     width: 100%;
     height: 108px;
-    padding: 0 16px;
+    padding: 0 $pd_s;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       height: auto;
-      padding: 0 24px;
+      padding: 0 $pd_m;
       margin-bottom: 8px;
     }
 
-    @media screen and (min-width: 1024px) {
-      padding: 0 32px;
+    @media screen and (min-width: $screen-xl) {
+      padding: 0 $pd_l;
     }
   }
 
   &__swiper-wrapper {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -28,7 +28,7 @@
   }
 
   &__swiper-wrapper--height {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       max-height: 1000px;
       transition: all 1s ease;
     }
@@ -38,19 +38,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
-    border: 1px solid #eaeaea;
+    background: $color_back2;
+    border: 1px solid $color_back3;
     border-radius: 6px;
     width: 240px;
     height: 72px;
-    padding: 16px;
+    padding: $pd_s;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       width: 31%;
       margin-bottom: 16px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-xl) {
       width: 23%;
     }
   }
@@ -62,7 +62,7 @@
   }
 
   &__swiper-pagination {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       display: none;
     }
   }

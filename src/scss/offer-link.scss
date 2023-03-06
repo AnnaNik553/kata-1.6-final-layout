@@ -9,23 +9,21 @@
 }
 
 .offer-link {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: #1b1c21;
+  @include fontz(16px, 24px, -0.2px);
+  color: $color_text1;
   display: inline-block;
-  padding: 0 16px;
+  padding: 0 $pd_s;
   font-weight: 500;
   position: relative;
   margin-bottom: 60px;
 
-  @media screen and (min-width: 768px) {
-    padding: 0 24px;
+  @media screen and (min-width: $screen-lg) {
+    padding: 0 $pd_m;
     margin-bottom: 80px;
   }
 
-  @media screen and (min-width: 1024px) {
-    padding: 0 32px;
+  @media screen and (min-width: $screen-xl) {
+    padding: 0 $pd_l;
   }
 
   &:after {

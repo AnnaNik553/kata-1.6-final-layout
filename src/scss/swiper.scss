@@ -1,12 +1,12 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: #dddddd;
+  background: $color_back5;
   margin: 0 12px;
 }
 
 .swiper-pagination-bullet-active {
-  background: #b5b6bc;
+  background: $color_back8;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {

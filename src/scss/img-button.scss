@@ -12,17 +12,17 @@
   }
 
   &--burger {
-    background: url('../img/nav/burger.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/burger.svg') no-repeat center center $color_back2;
   }
 
   &--burger-pseudo-element::after {
-    @media screen and (min-width: 650px) and (max-width: 1024px) {
+    @media screen and (min-width: $screen-md) and (max-width: $screen-xl) {
       content: '';
       position: absolute;
       width: 2px;
       height: 32px;
       transform: translateY(-50%);
-      background: #eaeaea;
+      background: $color_back3;
       border-radius: 1px;
       margin-left: 23px;
       cursor: default;
@@ -31,41 +31,39 @@
 
   &--burger-close {
     background: url('../img/nav/burger-close.svg') no-repeat center center
-      #ffffff;
-
-    
+    $color_back2;
   }
 
   &--search {
-    background: url('../img/nav/search.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/search.svg') no-repeat center center $color_back2;
   }
 
   &--call {
-    background: url('../img/nav/call.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/call.svg') no-repeat center center $color_back2;
   }
 
   &--feedback {
-    background: url('../img/nav/chat.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/chat.svg') no-repeat center center $color_back2;
   }
 
   &--profile {
-    background: url('../img/nav/profile.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/profile.svg') no-repeat center center $color_back2;
   }
 
   &--repair {
-    background: url('../img/nav/repair.svg') no-repeat center center #ffffff;
+    background: url('../img/nav/repair.svg') no-repeat center center $color_back2;
     position: relative;
   }
 
   &--checkstatus {
     background: url('../img/nav/checkstatus.svg') no-repeat center center
-      #ffffff;
+    $color_back2;
   }
 
   &--hidden {
     display: none;
 
-    @media screen and (min-width: 650px) and (max-width: 1024px) {
+    @media screen and (min-width: $screen-md) and (max-width: $screen-xl) {
       display: block;
     }
   }
@@ -76,7 +74,7 @@
     width: 2px;
     height: 32px;
     transform: translateX(-50%);
-    background: #eaeaea;
+    background: $color_back3;
     border-radius: 1px;
     margin-left: -19px;
     cursor: default;

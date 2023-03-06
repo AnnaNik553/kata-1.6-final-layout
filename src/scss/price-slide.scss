@@ -1,11 +1,11 @@
 .price-slide {
-  background: #ffffff;
+  background: $color_back2;
   border-radius: 6px;
-  padding: 16px;
+  padding: $pd_s;
   width: 260px;
   min-height: 210px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $screen-lg) {
     width: auto;
     min-height: auto;
     display: grid;
@@ -13,46 +13,43 @@
     align-items: center;
   }
 
-  @media screen and (min-width: 1024px) {
-    padding: 16px 24px;
+  @media screen and (min-width: $screen-xl) {
+    padding: $pd_s $pd_m;
   }
 
   &--hr:after {
     display: none;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       content: '';
       position: absolute;
       display: block;
       width: 96%;
       height: 1px;
-      background: #eaeaea;
+      background: $color_back3;
       bottom: 0;
       left: 2%;
     }
   }
 
   &__title {
-    font-size: 14px;
-    line-height: 16px;
-    color: #7e7e82;
+    @include fontz(14px, 16px, 0);
+    color: $color_text2;
     mix-blend-mode: normal;
     opacity: 0.72;
     margin-bottom: 4px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       display: none;
     }
   }
 
   &__info {
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-    color: #1b1c21;
+    @include fontz(14px, 18px, 0.2px);
+    color: $color_text1;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       margin-bottom: 0;
     }
   }

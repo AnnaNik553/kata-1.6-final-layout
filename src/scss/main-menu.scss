@@ -2,10 +2,8 @@
   &__link {
     width: 100%;
     display: inline-block;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1b1c21;
+    @include fontz(16px, 24px, -0.2px);
+    color: $color_text1;
     padding: 10px 0;
     margin-bottom: 12px;
     position: relative;
@@ -16,7 +14,7 @@
       position: absolute;
       width: 4px;
       height: 32px;
-      background: #41f6d7;
+      background: $color_accent2;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       transform: translate(-24px, -5px);
@@ -26,7 +24,7 @@
     &:active,
     &:hover,
     &:focus {
-      color: #7e7e82;
+      color: $color_text2;
     }
 
     &:active::before,
@@ -38,14 +36,14 @@
 
   &__link--active {
     position: relative;
-    color: #7e7e82;
+    color: $color_text2;
 
     &::after {
       content: '';
       position: absolute;
       width: 4px;
       height: 32px;
-      background: #41f6d7;
+      background: $color_accent2;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       right: 107%;

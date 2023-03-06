@@ -16,6 +16,7 @@
   },
   "plugins": ["prettier", "import"],
   "rules": {
+    "no-var": "error",
     "import/no-unresolved": [2, { "caseSensitive": false }],
     "import/order": [
       2,

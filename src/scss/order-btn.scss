@@ -1,11 +1,9 @@
 .order-btn {
-  background: #ff3e79;
+  background: $color_accent1;
   border-radius: 16px;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: -0.15px;
+  @include fontz(12px, 24px, -0.15px);
   text-transform: uppercase;
-  color: #ffffff;
+  color: $color_back2;
   font-weight: 500;
   padding: 4px 12px;
   transition: all 0.3s ease;
@@ -30,7 +28,7 @@
     right: 16px;
     bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $screen-lg) {
       position: static;
       justify-self: end;
     }

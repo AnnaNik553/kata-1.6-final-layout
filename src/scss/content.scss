@@ -1,5 +1,5 @@
 .content {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $screen-xl) {
     margin-left: 320px;
   }
 }

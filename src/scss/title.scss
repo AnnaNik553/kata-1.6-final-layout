@@ -1,8 +1,6 @@
 .title {
-  font-size: 28px;
-  line-height: 40px;
-  letter-spacing: -0.2px;
-  color: #1b1c21;
+  @include fontz(28px, 40px, -0.2px);
+  color: $color_text1;
   font-weight: 700;
   position: relative;
   padding-left: 16px;
@@ -12,7 +10,7 @@
     position: absolute;
     width: 4px;
     height: 40px;
-    background: #41f6d7;
+    background: $color_accent2;
     left: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

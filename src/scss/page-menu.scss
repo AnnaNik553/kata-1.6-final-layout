@@ -8,7 +8,7 @@
     overflow-x: auto;
     white-space: nowrap;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $screen-xl) {
       scrollbar-width: none;
 
       &::-webkit-scrollbar {
@@ -18,10 +18,8 @@
   }
 
   &__item {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #7e7e82;
+    @include fontz(16px, 24px, -0.2px);
+    color: $color_text2;
     display: flex;
     margin-bottom: 5px;
   }
@@ -31,15 +29,15 @@
   }
 
   &__link {
-    color: #7e7e82;
+    color: $color_text2;
     border: 2px solid transparent;
     padding: 7px 20px;
     transition: all 0.5s;
 
     &:hover,
     &:focus {
-      background: #ffffff;
-      border: 2px solid #b8ffec;
+      background: $color_back2;
+      border: 2px solid $color_accent3;
       border-radius: 6px;
     }
   }

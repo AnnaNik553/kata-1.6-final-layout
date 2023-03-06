@@ -23,7 +23,7 @@
               <button
                 type="button"
                 title="Главное меню"
-                class="img-button img-button--burger-close site-nav__img-button--margin site-nav__img-button--hidden"
+                class="img-button img-button--burger-close site-nav__img-button--burger-close site-nav__img-button--margin site-nav__img-button--hidden"
                 >Главное меню</button
               >
               <a href="#" class="logo site-nav__logo--margin-right--auto"
@@ -36,15 +36,18 @@
               /></a>
               <button
                 type="button"
+                tabindex="0"
                 title="Поиск"
                 class="img-button img-button--search"
                 >Поиск</button
               >
               <!-- поиск -->
-              <div class="modal-search">
-                <span class="modal-search__close-btn" title="Закрыть поиск"
-                  >×</span
-                >
+              <div class="modal-search" role="dialog">
+                <button
+                  type="button"
+                  title="Закрыть поиск"
+                  class="img-button img-button--burger-close modal-search__close-btn"
+                ></button>
                 <div class="modal-search__content">
                   <form action="#" class="modal-search__form">
                     <input
@@ -238,13 +241,7 @@
           <a href="#" class="response response--margins">Отзывы</a>
           <section class="about about--align--row">
             <h2 class="about__title visually-hidden">О нас</h2>
-            <div class="about__box">
-              <input
-                type="checkbox"
-                class="about__read-more-checker"
-                aria-labelledby="read-more"
-                id="read-more-checker"
-              />
+            <div class="about__box about__box--height">
               <div class="about__limiter">
                 <p class="about__text"
                   >Мы&nbsp;являемся авторизованным сервисным центром
@@ -260,12 +257,12 @@
                   в&nbsp;свою очередь, советуют нас родным и&nbsp;близким.</p
                 >
               </div>
-              <label
-                for="read-more-checker"
-                class="about__read-more-button"
-                id="read-more"
-                >Читать далее</label
+              <button
+                type="button"
+                class="about__show-btn about__show-btn--margin "
               >
+                <span class="about__show-text"></span>
+              </button>
             </div>
             <img
               src="img/main/MG3223L.jpg"
@@ -528,7 +525,7 @@
           </div>
         </footer>
         <!-- модальное окно "заказать звонок" -->
-        <div class="modal modal-call">
+        <div class="modal modal-call" role="dialog">
           <div class="modal__content">
             <button
               type="button"
@@ -562,7 +559,7 @@
         </div>
         <!-- модальное окно "заказать звонок" -->
         <!-- модальное окно "Обратная связь" -->
-        <div class="modal modal-feedback">
+        <div class="modal modal-feedback" role="dialog">
           <div class="modal__content">
             <button
               type="button"
@@ -592,7 +589,12 @@
                 class="modal__input"
                 required
               />
-              <textarea name="message" class="modal__textarea" required placeholder="Сообщение"></textarea>
+              <textarea
+                name="message"
+                class="modal__textarea"
+                required
+                placeholder="Сообщение"
+              ></textarea>
               <p class="modal__text"
                 >Нажимая “отправить”, вы даете согласие на
                 <a class="modal__link" href="#"

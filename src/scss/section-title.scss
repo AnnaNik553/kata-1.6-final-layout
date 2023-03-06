@@ -1,22 +1,20 @@
 .section-title {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
+  @include fontz(16px, 24px, -0.2px);
   text-transform: uppercase;
-  color: #7e7e82;
-  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
-  border-top: 1px solid #D9FFF5;
+  color: $color_text2;
+  background: linear-gradient(90deg, $color_back1 0%, $color_back2 98.61%);
+  border-top: 1px solid $color_accent4;
 
   &--margins {
-    padding: 16px;
+    padding: $pd_s;
     margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
-      padding: 16px 24px;
+    @media screen and (min-width: $screen-lg) {
+      padding: $pd_s $pd_m;
       margin-bottom: 24px;
     }
-    @media screen and (min-width: 1024px) {
-      padding: 16px 32px;
+    @media screen and (min-width: $screen-xl) {
+      padding: $pd_s $pd_l;
     }
   }
 }

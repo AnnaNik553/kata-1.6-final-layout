@@ -1,10 +1,7 @@
 import './my-swiper'
+import './show-more'
 import './menu'
 import './search'
 import './call'
 import './feedback'
 import '../scss/style.scss'
-
-
-
-
