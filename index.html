@@ -17,12 +17,12 @@
         <div class="site-nav__box site-nav__box--hidden">
           <div class="site-nav__wrapper">
             <div class="site-nav__top">
-              <button type="button" title="Главное меню" class="img-button img-button--burger-close site-nav__img-button--margin site-nav__img-button--hidden">Главное меню</button>
+              <button type="button" title="Главное меню" class="img-button img-button--burger-close site-nav__img-button--burger-close site-nav__img-button--margin site-nav__img-button--hidden">Главное меню</button>
               <a href="#" class="logo site-nav__logo--margin-right--auto"><img class="logo__img" src="img/nav/Logo.svg" alt="Логотип компании CPS" width="97" height="51"></a>
-              <button type="button" title="Поиск" class="img-button img-button--search">Поиск</button>
+              <button type="button" tabindex="0" title="Поиск" class="img-button img-button--search">Поиск</button>
               
-              <div class="modal-search">
-                <span class="modal-search__close-btn" title="Закрыть поиск">×</span>
+              <div class="modal-search" role="dialog">
+                <button type="button" title="Закрыть поиск" class="img-button img-button--burger-close modal-search__close-btn"></button>
                 <div class="modal-search__content">
                   <form action="#" class="modal-search__form">
                     <input class="modal-search__input" type="text" placeholder="Что ищем?..." name="search">
@@ -96,8 +96,7 @@
           <a href="#" class="response response--margins">Отзывы</a>
           <section class="about about--align--row">
             <h2 class="about__title visually-hidden">О нас</h2>
-            <div class="about__box">
-              <input type="checkbox" class="about__read-more-checker" aria-labelledby="read-more" id="read-more-checker">
+            <div class="about__box about__box--height">
               <div class="about__limiter">
                 <p class="about__text">Мы&nbsp;являемся авторизованным сервисным центром
                   по&nbsp;ремонту техники Dell. Только у&nbsp;нас вы&nbsp;можете
@@ -109,7 +108,9 @@
                   к&nbsp;нам обращаются по&nbsp;рекомендациям&nbsp;и,
                   в&nbsp;свою очередь, советуют нас родным и&nbsp;близким.</p>
               </div>
-              <label for="read-more-checker" class="about__read-more-button" id="read-more">Читать далее</label>
+              <button type="button" class="about__show-btn about__show-btn--margin">
+                <span class="about__show-text"></span>
+              </button>
             </div>
             <img src="img/main/MG3223L.jpg" alt="Фото логотипа компании CPS" class="about__img">
           </section>
@@ -299,7 +300,7 @@
           </div>
         </footer>
         
-        <div class="modal modal-call">
+        <div class="modal modal-call" role="dialog">
           <div class="modal__content">
             <button type="button" title="Главное меню" class="img-button img-button--burger-close modal__img-button modal-call__close"></button>
             <h2 class="subtitle modal__subtitle">Заказать звонок</h2>
@@ -315,7 +316,7 @@
         </div>
         
         
-        <div class="modal modal-feedback">
+        <div class="modal modal-feedback" role="dialog">
           <div class="modal__content">
             <button type="button" title="Главное меню" class="img-button img-button--burger-close modal__img-button modal-feedback__close"></button>
             <h2 class="subtitle modal__subtitle">Обратная связь</h2>
